@@ -3,6 +3,7 @@ import React from 'react';
 import CalculatorTitle from './calculatorTitle.js';
 import OutputScreen from './outputScreen.js';
 import Button from './button.js';
+import Style from '../css/style.css';
 
 // Create a Calculator component
 class Calculator extends React.Component {
@@ -74,14 +75,12 @@ class Calculator extends React.Component {
     }
   }
 
-
-
     render()
     {
       return (
         <div className='frame'>
           <CalculatorTitle value="Siang's Calculator"/>
-          <div class="mainCalc">
+          <div className="mainCalc">
             <OutputScreen question={this.state.question} result={this.state.result}/>
               <div className="button-row">
                 <Button label={'Clear'} handleClick = {this.handleClick}/>
@@ -101,14 +100,14 @@ class Calculator extends React.Component {
                 <Button label={'6'} handleClick = {this.handleClick}/>
                 <Button label={'-'} handleClick = {this.handleClick}/>
               </div>
-              <div className="button-row">
+              <div>
                 <Button label={'1'} handleClick = {this.handleClick}/>
                 <Button label={'2'} handleClick = {this.handleClick}/>
                 <Button label={'3'} handleClick = {this.handleClick}/>
                 <Button label={'+'} handleClick = {this.handleClick}/>
               </div>
-              <div className="button-row">
-                <Button label={'0'} handleClick = {this.handleClick}/>
+              <div>
+                <Button className='wider' label={'0'} handleClick = {this.handleClick}/>
                 <Button label={'='} handleClick = {this.handleClick}/>
               </div>
 
